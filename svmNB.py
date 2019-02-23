@@ -19,6 +19,8 @@ from nltk.corpus import wordnet as wn
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn import model_selection, naive_bayes, svm
 from sklearn.metrics import accuracy_score
+from sklearn.metrics import confusion_matrix
+
 #import nltk
 #nltk.download()
 #from google.colab import drive
@@ -106,6 +108,8 @@ print("********************************")
 print("Accuracy of 5-CV in Naive-bayes : %0.2f (+/- %0.2f)" % (scores.mean()*100, scores.std() * 2))
 predictionsdf_NB = Naivedf.predict(Test_X_Tfidfdf)
 print("Naive Bayes df Accuracy Score -> ",accuracy_score(predictionsdf_NB, Testdf_Y)*100)
+print("Naive Bayes --confusion_matrix -> ")
+print(confusion_matrix(predictionsdf_NB, Testdf_Y))
 print("********************************")
 
 # Classifier - Algorithm - SVM
@@ -118,4 +122,6 @@ scores            = cross_val_score(SVMdf, Train_X_Tfidfdf, Traindf_Y, cv=5)
 print("Accuracy of 5-CV in SVM:: %0.2f (+/- %0.2f)" % (scores.mean()*100, scores.std() * 2))
 predictionsdf_SVM = SVMdf.predict(Test_X_Tfidfdf)
 print("SVM Accuracy Score -> ",accuracy_score(predictionsdf_SVM, Testdf_Y)*100)
+print("SVM --confusion_matrix -> ")
+print(confusion_matrix(predictionsdf_SVM, Testdf_Y))
 print("********************************")
