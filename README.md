@@ -19,8 +19,8 @@ tutorial is at 	```https://github.com/fastai/fastai/tree/master/courses/dl2/imdb
 you can start training and evaluating by executing ./start.sh which runs the following: 
 
 - install old fastai
-	```sudo pip install fastai==0.7.0
- 	sudo pip install torchtext==0.2.3```
+	sudo pip install fastai==0.7.0
+ 	sudo pip install torchtext==0.2.3
 - install requirements as necessary ```pip3 install fire spacy```
 	(maybe pip install -U spacy[cuda92]?)
 - make sure spacy loads the english stuff ```sudo python3 -m spacy download en```
