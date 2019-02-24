@@ -63,3 +63,6 @@ you can start training and evaluating by executing ./start.sh which runs the fol
 - eval the model (step 5)
 	python3 ./imdb_scripts/eval_clas.py data 0 --lm-id pretrain_wt103 --clas-id pretrain_wt103
 	
+	
+The next part of svmNB.py trains the model after preprocessing using SVM and Naive Bayes.
+
