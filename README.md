@@ -2,12 +2,16 @@
 Sentiment Analysis Scenario
 
 Deep Archticture Part: 
+
 tutorial is at 	```https://github.com/fastai/fastai/tree/master/courses/dl2/imdb_scripts```
 
 - for installation you need: 
+
 	sudo pip install fastai==0.7.0
+	
  	sudo pip install torchtext==0.2.3
-  pip3 install fire spacy
+  
+  	pip3 install fire spacy
   
 - to make sure spacy loads the english stuff 
 ```sudo python3 -m spacy download en```
